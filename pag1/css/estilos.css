@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    background-color: #f2dbf3;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(175, 42, 236, 0.9);
+    font-family: "Inter", sans-serif;
+    height: 100px;
+    padding: 0 2%;
+    width: 100%;
+    position: fixed; /* Mantiene la barra fija en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que la barra esté por encima de otros contenidos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    
+}
+
+.tituloLogo {
+    font-size: 38px;
+    margin-top: 50px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+}
+
+.linkPaginaHome{
+    text-decoration: none;
+}
+
+
+#navbar ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    margin-left: 400px;
+    margin-top: 20px;
+    float: left;
+    font-size: 22px;
+    display: flex;
+}
+
+#navbar ul li {
+    display: inline; /* Coloca los elementos en línea */
+    margin-right: 35px; /* Espacio entre los elementos */
+    font-weight: 200;
+    position: relative;
+}
+
+#navbar ul li:hover{
+    font-size: 24px;
+    color: #35053f;
+    cursor: pointer;
+}
+
+#navbar ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+
+#navbar ul li:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+#navbar ul li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #6b0bac;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+#navbar ul li:hover::before {
+    width: 100%;
+}
+
+#navbar ul li a:hover {
+    background-color: rgba(175, 42, 236, 0.9);
+    transform: scale(1.05); /* Efecto de zoom ligero al hacer hover */
+}
+
+.parallax {
+    background-image: url(../images/imagen1.jpg);
+    opacity: 60%;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+/*ESTILOS PAGINA PRINCIPAl*/
+#contenedor1Info {
+    display: flex;
+    margin-top: 120px;
+    height: 500px;
+    flex-wrap: wrap; /* Para mejor adaptación en pantallas más pequeñas */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#contenedorTexto {
+    width: 50%;
+    margin-left: 42px;
+}
+
+#contenedorTexto h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    color: #35053f;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#contenedorTexto h1:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#contenedorTexto p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300; 
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #444; 
+    
+}
+
+#contenedorImagen {
+    display: block;
+}
+
+#contenedorImagen a{
+    font-size: 10px;
+    opacity: 0.7; /* Un poco más visible pero discreto */
+    display: block;
+    margin-top: 5px;
+    margin-left: 450px;
+}
+
+#contenedorImagen img{
+    width: 400px;
+    margin-left: 130px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#contenedorImagen img:hover {
+    transform: scale(1.05); /* Ligero zoom al pasar el cursor */
+}
+
+/* Estilo del banner de la sección 2 */
+#contenedor2Referentes {
+    width: 100%;
+    height: 600px;
+    background-color: #f2dbf3;
+}
+
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura del banner */
+}
+
+.banner {
+    background-image: url(../images/imagen3.jpg); /* Coloca aquí tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro para mejorar la legibilidad del texto */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.banner h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5em; /* Ajusta según el diseño */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
+}
+
+.banner p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.banner-button {
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #d6336c; /* Color llamativo */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #a52a75; /* Color de fondo en hover */
+}
+
+/*ESTILOS FOOTER*/
+/* Estilo del footer */
+#footer {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Línea sutil arriba del footer */
+    height: 100px;
+}
+
+.footer-container {
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-links li {
+    display: inline; /* Mostrar los elementos en línea */
+    margin: 0 15px;
+}
+
+.footer-links a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #35053f; /* Color del texto */
+    font-size: 1em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayar el enlace al pasar el cursor */
+    color: #d6336c; /* Color en hover */
+}
+
+
+/*ESTILOS PAGINA 2 HISTORIA*/
+
+#section1Historia, #section2Historia {
+    display: flex;
+    flex-direction:row;
+    margin-top: 120px;
+    height: 480px;
+    padding: 40px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#section1Historia:hover, #section2Historia:hover {
+    transform: scale(1.02); /* Efecto de zoom suave al pasar el ratón */
+}
+
+.ladoTexto, .ladoTextoSection2 {
+    width: 60%;
+    margin-left: 30px;
+    padding-right: 20px;
+}
+
+.ladoTexto h2, .ladoTextoSection2 h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #35053f;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.ladoTexto p, .ladoTextoSection2 p {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.ladoTexto h3, .ladoTextoSection2 h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+
+.ladoTexto ul li, .ladoTextoSection2 ul li{
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ladoImagen, .ladoImagenSection2 {
+    width: 20%;
+    margin-left: 50px;
+    text-align: center;
+}
+
+
+.containerImg{
+    width: 300px;
+    height: 300px;
+    border: 5px solid #22093f;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para destacar la imagen */
+    transition: transform 0.3s ease;
+}
+
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerImg:hover {
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón sobre la imagen */
+}
+
+.referenciaImg {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.descripcion {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #35053f;
+    margin-top: 20px;
+    border-left: 4px solid #360e5c;
+    padding-left: 15px;
+    font-style: italic;
+    width: 100%;
+}
+
+/*Estilos Historia segunda seccion*/
+#section2Historia {
+    margin-top: 20px;
+}
+
+.ladoTextoSection2 {
+    margin-left: 100px;
+}
+
+/*ESTILOS PAGINA FORMULARIO*/
+
+#paginaForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-top: 150px;
+    padding-bottom: 20px;
+     /* Ajustes para la imagen de fondo */
+     background-image: url(../images/img7.jpg);
+     background-size: cover; /* Hace que la imagen cubra todo el fondo */
+     background-position: center; /* Centra la imagen en el contenedor */
+     background-repeat: no-repeat; /* Evita que la imagen se repita */
+     opacity: 70%;
+     box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra interna */
+     border-radius: 25px;
+     border: 2px solid rgba(163, 46, 85, 0.8); /* Bordes decorativos */
+     padding: 20px;
+     transition: transform 0.3s ease;
+     
+}
+
+
+
+.ladoImagenPaginaForm {
+    margin-left: 20px;
+    
+}
+
+.ladoImagenPaginaForm img{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ladoTextoPaginaForm {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.ladoTextoPaginaForm h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+
+    /* Sombra para resaltar el texto */
+    color: #ffffff;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos de los Inputs */
+#contactForm { 
+    gap: 40px;
+    margin-right: 40px;
+}
+
+.datosBasicos, .datosExtras {
+    background-color: #f1e4f3;
+    width: 100%;
+    height: 400px;
+    display: block;
+    justify-content: center;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    opacity: 95%;
+
+}
+
+.datosExtras {
+    height: 300px;
+}
+
+#contactForm label {
+    font-size: 18px;
+    color: #35053f;
+    margin-left: 20px;
+
+}
+
+#name, #email, #edad, #phone, #direccion, #ciudad, #pais {
+    width: 80%;
+    margin-top: 10px;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #50021d;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#name:hover, #email:hover, #edad:hover, #phone:hover, #direccion:hover, #ciudad:hover, #pais:hover{
+    transform: scale(1.05);
+}
+
+#edad {
+    width: 10%;
+    margin-left: 10px;
+}
+
+#phone {
+    width: 30%;
+    margin-left: 10px;
+}
+
+#direccion {
+    width: 68%;
+    margin-left: 10px;
+}
+
+#ciudad {
+    width: 30%;
+}
+
+#pais {
+    width: 30%;
+}
+
+.datosExtras h3 {
+    font-size: 20px;
+    color: #35053f;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.habilidades {
+   margin-bottom: 20px;
+   width: 60%;
+  
+}
+
+/* Estilos de los botones */
+#contactForm button {
+    background-color: #35053f;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #a52e55;
+    transform: scale(1.05);
+}
+
+
+/* Estilo del select */
+select#Pais {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    appearance: none; /* Elimina el diseño por defecto del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Estilo general para los labels */
+.datosExtras .habilidades .infoExtra label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #35053f;
+    margin-bottom: 10px;
+    cursor: pointer; /* Para indicar que es clickable */
+}
+
+/* Estilo para los checkboxes */
+.datosExtras .habilidades input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #ff7e5f; /* Color del checkbox al ser seleccionado */
+}
+
+/* Espaciado entre los checkbox */
+.datosExtras  {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.datosExtras h3 {
+    font-size: 26px;
+    
+}
+
+/* Mejora de estilo para el select */
+.datosExtras select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #35053f;
+}
+
+
+.infoExtra {
+    width: 80%;
+    margin-right: 100px;
+}
+
+.preferenciaContacto {
+    margin-top: 20px;
+}
+
+
+.preferenciaContacto input[type="radio"] {
+    accent-color: #ff7e5f;
+}
+
+.preferenciaContacto label {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #35053f;
+}
+
+
+#paginaForm a{
+    margin-top: 900px;
+}
+
+

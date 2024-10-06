@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="linkPaginaHome"><h1 class="tituloLogo">SoftGirls</h1></a>
+        <ul>
+            <img src="" alt="" class="logo">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div id="paginaForm">
+        <a href="https://www.freepik.com/free-vector/women-s-day-with-women-faces-pattern_6528272.htm#fromView=search&page=3&position=7&uuid=3f9d2a8d-030e-4631-a529-38fc71ccf619">Image by freepik</a>
+        <div class="ladoTextoPaginaForm">
+            <h2>Contáctenos</h2>
+            <form action="" id="contactForm">
+                <div class="datosBasicos">
+
+                    <label for="name">Nombre Completo</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+
+                    <br>
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+
+                    <br>
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" required min="18" max="60">
+
+                    <label for="phone">Número de Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="">
+
+                    <br>
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" id="direccion">
+
+                    <br>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" name="ciudad" id="ciudad">
+
+                    <label for="Pais"> Pais </label>
+                    <select name="Pais" id="Pais">
+                        <option value="">Colombia</option>
+                        <option value="">Argentina</option>
+                        <option value="">Mexico</option>
+                    </select>
+                </div>
+               
+
+                <div class="datosExtras">
+                    <div class="habilidades">
+                        <h3>Habilidades Técnicas</h3>
+                        <label for="python"><input type="checkbox" id="python" name="habilidades">Programación en Python</label>
+                        
+                        <br>
+                        <label for="desarrolloWeb"><input type="checkbox" id="desarrolloWeb" name="habilidades"> Desarrollo Web (HTML/CSS)</label>
+                        
+                        <br>
+                        <label for="appsMoviles"><input type="checkbox" id="appsMoviles" name="habilidades">Desarrollo de Aplicaciones Móviles</label>
+                         
+                        <br>
+                        <label for="basesDeDatosSql"><input type="checkbox" id="basesDeDatosSql" name="habilidades">Bases de Datos SQL</label>
+                         
+                        <br>
+                        <label for="analisDeDatos"><input type="checkbox" id="analisDeDatos" name="habilidades">Análisis de Datos</label>
+                        <br>
+                    </div>
+
+                    <div class="infoExtra">
+                        <label for="comentariosExtras" >Comentarios adicionales</label>
+                        <textarea id="comentariosExtras" name="comentariosExtras" rows="4" cols="50" placeholder="Escribe más sobre tus habilidades o proyectos..."></textarea>
+                
+                        <label for="archivoCV">Adjuntar CV</label>
+                        <input type="file" id="archivoCV" name="archivoCV" accept=".pdf, .doc, .docx">
+                    
+                        <br>
+                        
+                        <div class="preferenciaContacto">
+                        <label for="preferenciaContacto">Preferencia de Contacto:</label>
+                        <input type="radio" id="contactoEmail" name="contacto" value="email">
+                        <label for="contactoEmail">Email</label>
+                        <input type="radio" id="contactoTelefono" name="contacto" value="telefono">
+                        <label for="contactoTelefono">Teléfono</label>
+                    </div>
+                    <br>
+                    <label for="disponibilidadFecha">Fecha de Disponibilidad</label>
+                    <input type="date" id="disponibilidadFecha" name="disponibilidadFecha">
+                
+                    
+
+                    </div>
+                
+                    
+                </div>
+                
+                <button>Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="contactenos.html">Contacto</a></li>
+                <li><a href="#contenedor2Referentes">Mujeres Referentes</a></li>
+                <li><a href="https://www.example.com/lectura-feminismo" target="_blank">Lectura sobre Feminismo</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
