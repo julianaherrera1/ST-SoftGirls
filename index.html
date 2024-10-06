@@ -1,81 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoftGirls</title>
+    <meta name="description" content="SoftGirls empodera a las mujeres en tecnología y programación a través de recursos y comunidades inclusivas.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!--Cabecera-->
+    <!-- Cabecera -->
     <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html" id="tituloNav">SoftGirls</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" id="tituloNav">SoftGirls</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#menu">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <br>
-    <!--Contenido Pagina-->
+    <!-- Contenido Principal -->
     <main>
-        <div class="container">
-            <h2 class="text-white text-center mb-4" style="font-weight: 200;">Menú</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card text-bg-dark shadow-lg" style="border-radius: 15px;">
-                        <img src="https://i.postimg.cc/PqcJ1s8M/img2.png" class="card-img" alt="...">
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.644); border-radius: 15px;"></div>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title" style="font-size: 34px; color: #d8cfcc;"><i class="fas fa-laptop-code"></i> Mujeres en la Programación</h5>
-                            <p class="card-text" style="font-size: 20px;">Sitio web con CSS puro</p>
-                            <a href="#" class="btn btn-primary mt-2">Ir a Mujeres en la Programación</a>
+        <section id="menu" class="py-5">
+            <div class="container">
+                <h2 class="text-white text-center mb-4">Menú</h2>
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-bg-dark shadow-lg">
+                             <!-- Superposición oscura -->
+                             <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div> 
+                            <img src="https://i.postimg.cc/PqcJ1s8M/img2.png" class="card-img" alt="Mujeres en la Programación" loading="lazy">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <h5 class="card-title"><i class="fas fa-laptop-code"></i> Mujeres en la Programación</h5>
+                                <p class="card-text">Sitio web con CSS puro</p>
+                                <a href="#" class="btn btn-primary mt-2" aria-label="Ir a Mujeres en la Programación">Ir a Mujeres en la Programación</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="card text-bg-dark shadow-lg" style="border-radius: 15px;">
-                        <img src="https://i.postimg.cc/PqcJ1s8M/img3.png" class="card-img" alt="...">
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.664); border-radius: 15px;"></div>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title" style="font-size: 34px; color: #f3efed;"><i class="fas fa-shield-alt"></i> Violencia de Género</h5>
-                            <p class="card-text" style="font-size: 20px;">Sitio web con Bootstrap y MDB</p>
-                            <a href="#" class="btn btn-primary mt-2">Ir a Violencia de Género</a>
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-bg-dark shadow-lg">
+                            <!-- Superposición oscura -->
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div> 
+                            <img src="https://i.postimg.cc/527LJXkt/img2.jpg" class="card-img" alt="Violencia de Género" loading="lazy" style="height: 718px;">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <h5 class="card-title"><i class="fas fa-shield-alt"></i> Violencia de Género</h5>
+                                <p class="card-text">Sitio web con Bootstrap y MDB</p>
+                                <a href="#" class="btn btn-primary mt-2" aria-label="Ir a Violencia de Género">Ir a Violencia de Género</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="card text-bg-dark shadow-lg" style="border-radius: 15px;">
-                        <img src="https://i.postimg.cc/PqcJ1s8M/img4.png" class="card-img" alt="...">
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); border-radius: 15px;"></div>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title" style="font-size: 34px; color: #ebe5e2;"><i class="fas fa-globe"></i> Otra Página</h5>
-                            <p class="card-text" style="font-size: 20px;">Sitio web con TailWind CSS</p>
-                            <a href="#" class="btn btn-primary mt-2">Ir a Otra Página</a>
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card text-bg-dark shadow-lg">
+                            <img src="https://i.postimg.cc/PqcJ1s8M/img4.png" class="card-img" alt="Otra Página" loading="lazy">
+                            <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <h5 class="card-title"><i class="fas fa-globe"></i> Otra Página</h5>
+                                <p class="card-text">Sitio web con TailWind CSS</p>
+                                <a href="#" class="btn btn-primary mt-2" aria-label="Ir a Otra Página">Ir a Otra Página</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Sobre Nosotras -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Sobre Nosotras</h2>
+                <p class="text-center">
+                    En SoftGirls, nos dedicamos a empoderar a las mujeres en el mundo de la tecnología y la programación. Creemos en la igualdad de oportunidades y trabajamos para crear un entorno inclusivo y accesible para todas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="py-5 bg-dark">
+            <div class="container">
+                <h2 class="text-center text-light mb-4">Contacto</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label text-light">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-light">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label text-light">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
-    <!--Pie de Pagina-->
-    <footer style="background-color: #1a1a1a;">
-        <div class="text-center text-light py-3">
-            © 2024 SoftGirls. Todos los derechos reservados.
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-light">SoftGirls</h5>
+                    <p class="text-light">Transformando la tecnologia con perspectiva femenina</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="text-center text-light mt-3">
+                © 2024 SoftGirls. Todos los derechos reservados.
+            </div>
         </div>
     </footer>
 
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
