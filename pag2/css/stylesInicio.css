@@ -44,7 +44,7 @@ body{
     font-size: 25px; /* Cambia el tamaño de la fuente */
     margin: 0 15px; /* Agregar margen a los lados de los enlaces */
     color: white !important; /* Asegura que los enlaces sean visibles */
-    margin-left: 20px; /* Agrega margen entre los enlaces */
+    margin-left: 6px; /* Agrega margen entre los enlaces */
     
 }
 
