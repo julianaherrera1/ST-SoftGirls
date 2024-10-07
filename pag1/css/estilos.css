@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
+:root {
+    --color-primario: #9f4dce;
+    --color-secundario: #6b2081;
+    --color-fondo: #1a1a1a;
+    --color-texto: #ebe5e2;
+    --color-boton: #741f85;
+    --color-boton-hover: #a82d98;
+}
+
 body {
-    background-color: #f2dbf3;
+    background-color: var(--color-fondo);
+    line-height: 1.8;
+   color: #333; /* Más contraste */
+   font-family: "Raleway", sans-serif;
 }
 
 #navbar {
     display: flex;
     align-items: center;
-    background-color: rgba(175, 42, 236, 0.9);
+    background-color: var(--color-fondo);
     font-family: "Inter", sans-serif;
     height: 100px;
     padding: 0 2%;
@@ -21,12 +34,27 @@ body {
     
 }
 
+
+#iconMenu {
+    display: none;
+}
+
 .tituloLogo {
-    font-size: 38px;
-    margin-top: 50px;
+    margin-top: 30px;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
+    color: var(--color-primario);
+    margin-left: 80px;
+    font-size: 40px;
+    transition: font-size 0.3s, color 0.3s;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+}
+
+.tituloLogo:hover {
+    font-size: 41px;
+    color: var(--color-secundario);
 }
 
 .linkPaginaHome{
@@ -47,9 +75,10 @@ body {
 
 #navbar ul li {
     display: inline; /* Coloca los elementos en línea */
-    margin-right: 35px; /* Espacio entre los elementos */
+    margin-right: 30px; /* Espacio entre los elementos */
     font-weight: 200;
     position: relative;
+    
 }
 
 #navbar ul li:hover{
@@ -60,10 +89,13 @@ body {
 
 #navbar ul li a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #fff;
+    color: #ffffffc2;
     transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 20px;
     border-radius: 5px;
 }
+
+
 
 
 #navbar ul li:hover::before {
@@ -97,7 +129,7 @@ body {
 }
 
 .parallax {
-    background-image: url(../images/imagen1.jpg);
+    background-image: url(https://i.postimg.cc/fLmSHNFM/imagen1.jpg);
     opacity: 60%;
     height: 400px;
     background-attachment: fixed;
@@ -105,6 +137,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+
+.logoHome {
+    width: 40px;
 }
 
 
@@ -187,7 +223,7 @@ body {
 }
 
 .banner {
-    background-image: url(../images/imagen3.jpg); /* Coloca aquí tu imagen de fondo */
+    background-image: url(https://i.postimg.cc/ZnLBSL4g/imagen3.jpg); /* Coloca aquí tu imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -664,3 +700,40 @@ input[type="file"] {
 }
 
 
+/*RESPONSIVE DESIGN*/
+@media (max-width: 768px) {
+
+    #navbar {
+        height: 90px;
+    }
+
+    #navbar ul {
+       flex-direction: column;
+       margin-left: 0;
+    }
+    #navbar ul li a{
+      display: none;
+    }
+
+    .tituloLogo {
+        margin-left: 5px;
+        font-size: 31px;
+        margin-top: 17px;
+    }
+
+    #iconMenu {
+        display: flex;
+        margin-left: 200px;
+        margin-top: -24px;
+        color: rgba(126, 126, 125, 0.795);
+    }
+
+    .linkMenu{
+        text-decoration: none;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+     }
+ }
+ 
