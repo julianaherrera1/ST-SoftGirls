@@ -34,6 +34,17 @@ body {
     
 }
 
+.navBarResponsive {
+    display: none;
+}
+
+#menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+#navbar ul.menu {
+    display: flex; /* Mostrar el menú en pantallas grandes */
+}
 
 #iconMenu {
     display: none;
@@ -127,6 +138,7 @@ body {
     background-color: rgba(175, 42, 236, 0.9);
     transform: scale(1.05); /* Efecto de zoom ligero al hacer hover */
 }
+
 
 .parallax {
     background-image: url(https://i.postimg.cc/fLmSHNFM/imagen1.jpg);
@@ -711,6 +723,8 @@ input[type="file"] {
        flex-direction: column;
        margin-left: 0;
     }
+
+    
     #navbar ul li a{
       display: none;
     }
@@ -723,13 +737,32 @@ input[type="file"] {
 
     #iconMenu {
         display: flex;
-        margin-left: 200px;
-        margin-top: -24px;
+        margin-left: 195px;
+        margin-top: -5px;
+        font-size: 25px;
         color: rgba(126, 126, 125, 0.795);
     }
 
     .linkMenu{
         text-decoration: none;
+    }
+
+    .navBarResponsive {
+        display: flex;
+        background-color: #222121;
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    .navBarResponsive ul li{
+        list-style: none;
+        margin-left: -20px;
+        font-size: 20px;
+    }
+
+    .navBarResponsive ul li a{
+        text-decoration: none;
+        color: rgba(245, 222, 179, 0.911);
     }
 
     .parallax {
