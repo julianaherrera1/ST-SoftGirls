@@ -16,7 +16,6 @@
     --transicion: 0.3s ease;
 }
 
-
 /* Reset de márgenes y paddings por defecto */
 * {
     margin: 0;
@@ -32,6 +31,7 @@ body {
     font-size: 16px;
 }
 
+/* Estilos de la barra de navegación */
 #navbar {
     display: flex;
     align-items: center;
@@ -46,23 +46,10 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     transition: background-color var(--transicion);
-    
 }
 
-.navBarResponsive {
-    display: none;
-}
-
-#menu-toggle {
-    display: none; /* Oculta el checkbox */
-}
-
-#navbar ul.menu {
-    display: flex; /* Mostrar el menú en pantallas grandes */
-}
-
-#iconMenu {
-    display: none;
+.linkPaginaHome {
+    text-decoration: none;
 }
 
 .tituloLogo {
@@ -78,77 +65,61 @@ body {
     color: var(--color-secundario);
 }
 
-.linkPaginaHome{
-    text-decoration: none;
+#menu-toggle {
+    display: none; /* Oculta el checkbox */
 }
 
-
-#navbar ul {
-    list-style-type: none; /* Elimina los puntos */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
-    margin-left: 700px;
-    margin-top: 20px;
-    float: left;
-    font-size: 22px;
-    display: flex;
-}
-
-#navbar ul li {
-    display: inline; /* Coloca los elementos en línea */
-    margin-right: 30px; /* Espacio entre los elementos */
-    font-weight: 200;
-    position: relative;
-    
-}
-
-#navbar ul li:hover{
-    font-size: 24px;
-    color: #35053f;
+.linkMenu {
+    display: none; /* Inicialmente oculto en pantallas grandes */
     cursor: pointer;
 }
 
-#navbar ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
+#iconMenu {
+    font-size: 28px;
+    color: var(--color-primario);
+}
+
+/* Estilos del menú */
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-right: 30px;
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
     color: #ffffffc2;
     transition: color 0.3s ease, background-color 0.3s ease;
     font-size: 20px;
     border-radius: 5px;
+    padding: 8px 12px;
+    display: block;
 }
 
+.menu li a:hover {
+    background-color: rgba(175, 42, 236, 0.9);
+    transform: scale(1.05);
+}
 
-
-
-#navbar ul li:hover::before {
+.menu li:hover::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 3px;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease;
-}
-
-#navbar ul li::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
     background-color: #6b0bac;
-    bottom: 0;
-    left: 0;
     transition: width 0.3s ease;
 }
 
-#navbar ul li:hover::before {
-    width: 100%;
+.menu li:hover {
+    color: #35053f;
+    cursor: pointer;
 }
-
-#navbar ul li a:hover {
-    background-color: rgba(175, 42, 236, 0.9);
-    transform: scale(1.05); /* Efecto de zoom ligero al hacer hover */
-}
-
 
 .parallax {
     background-image: url(https://i.postimg.cc/fLmSHNFM/imagen1.jpg);
@@ -158,23 +129,20 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .logoHome {
     width: 40px;
 }
 
-
-/*ESTILOS PAGINA PRINCIPAl*/
+/* ESTILOS PAGINA PRINCIPAL */
 #contenedor1Info {
     display: flex;
     margin-top: 120px;
     height: 500px;
-    flex-wrap: wrap; /* Para mejor adaptación en pantallas más pequeñas */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
 }
 
 #contenedorTexto {
@@ -182,14 +150,13 @@ body {
     margin-left: 42px;
 }
 
-#contenedorTexto h1{
+#contenedorTexto h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 44px;
     color: #ddd4dfc9;
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    
 }
 
 #contenedorTexto h1:hover {
@@ -204,22 +171,21 @@ body {
     font-size: 1.3em;
     line-height: 1.6;
     color: #bbb6b6; 
-    
 }
 
 #contenedorImagen {
     display: block;
 }
 
-#contenedorImagen a{
+#contenedorImagen a {
     font-size: 10px;
-    opacity: 0.7; /* Un poco más visible pero discreto */
+    opacity: 0.7;
     display: block;
     margin-top: 5px;
     margin-left: 450px;
 }
 
-#contenedorImagen img{
+#contenedorImagen img {
     width: 400px;
     margin-left: 130px;
     margin-right: 50px;
@@ -229,7 +195,7 @@ body {
 }
 
 #contenedorImagen img:hover {
-    transform: scale(1.05); /* Ligero zoom al pasar el cursor */
+    transform: scale(1.05);
 }
 
 /* Estilo del banner de la sección 2 */
@@ -242,11 +208,11 @@ body {
 .banner-section {
     position: relative;
     width: 100%;
-    height: 500px; /* Altura del banner */
+    height: 500px;
 }
 
 .banner {
-    background-image: url(https://i.postimg.cc/ZnLBSL4g/imagen3.jpg); /* Coloca aquí tu imagen de fondo */
+    background-image: url(https://i.postimg.cc/ZnLBSL4g/imagen3.jpg);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -265,7 +231,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro para mejorar la legibilidad del texto */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -277,9 +243,9 @@ body {
 
 .banner h1 {
     font-family: 'Inter', sans-serif;
-    font-size: 2.5em; /* Ajusta según el diseño */
+    font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner p {
@@ -294,501 +260,122 @@ body {
     font-size: 1em;
     padding: 10px 20px;
     color: #fff;
-    background-color: #d6336c; /* Color llamativo */
+    background-color: #d6336c;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .banner-button:hover {
-    background-color: #a52a75; /* Color de fondo en hover */
+    background-color: #a52a75;
+    transform: scale(1.05);
 }
 
-/*ESTILOS FOOTER*/
-/* Estilo del footer */
+/* ESTILOS FOOTER */
 #footer {
-    background-color: #1a1a1a; /* Color de fondo claro */
+    background-color: var(--color-footer);
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid #ddd; /* Línea sutil arriba del footer */
+    border-top: 1px solid #ddd;
     height: 100px;
 }
 
 .footer-container {
-    max-width: 1200px; /* Ancho máximo para el contenido */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .footer-links {
-    list-style: none; /* Eliminar los puntos de la lista */
+    list-style: none;
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
 
 .footer-links li {
-    display: inline; /* Mostrar los elementos en línea */
+    display: inline;
     margin: 0 15px;
 }
 
 .footer-links a {
-    text-decoration: none; /* Quitar subrayado */
-    color: #dfd5e0d7; /* Color del texto */
+    text-decoration: none;
+    color: var(--color-footer-texto);
     font-size: 1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Subrayar el enlace al pasar el cursor */
-    color: #d6336c; /* Color en hover */
+    text-decoration: underline;
+    color: var(--color-footer-hover);
 }
 
-
-/*ESTILOS PAGINA 2 HISTORIA*/
-
-#section1Historia, #section2Historia {
-    display: flex;
-    flex-direction:row;
-    margin-top: 120px;
-    height: 480px;
-    padding: 40px;
-    background-color: #fafafa;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; 
-    transition: transform 0.3s ease-in-out;
-}
-
-#section1Historia:hover, #section2Historia:hover {
-    transform: scale(1.02); /* Efecto de zoom suave al pasar el ratón */
-}
-
-.ladoTexto, .ladoTextoSection2 {
-    width: 60%;
-    margin-left: 30px;
-    padding-right: 20px;
-}
-
-.ladoTexto h2, .ladoTextoSection2 h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    color: #35053f;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.ladoTexto p, .ladoTextoSection2 p {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.ladoTexto h3, .ladoTextoSection2 h3 {
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #d6336c;
-    margin-bottom: 10px;
-}
-
-.ladoTexto ul li, .ladoTextoSection2 ul li{
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.ladoImagen, .ladoImagenSection2 {
-    width: 20%;
-    margin-left: 50px;
-    text-align: center;
-}
-
-
-.containerImg{
-    width: 300px;
-    height: 300px;
-    border: 5px solid #22093f;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para destacar la imagen */
-    transition: transform 0.3s ease;
-}
-
-.containerImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.containerImg:hover {
-    transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón sobre la imagen */
-}
-
-.referenciaImg {
-    font-size: 12px;
-    color: #777;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-.descripcion {
-    font-family: 'Georgia', serif;
-    font-size: 18px;
-    color: #35053f;
-    margin-top: 20px;
-    border-left: 4px solid #360e5c;
-    padding-left: 15px;
-    font-style: italic;
-    width: 100%;
-}
-
-/*Estilos Historia segunda seccion*/
-#section2Historia {
-    margin-top: 20px;
-}
-
-.ladoTextoSection2 {
-    margin-left: 100px;
-}
-
-/*ESTILOS PAGINA FORMULARIO*/
-
-#paginaForm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin-top: 150px;
-    padding-bottom: 20px;
-     /* Ajustes para la imagen de fondo */
-     background-image: url(../images/img7.jpg);
-     background-size: cover; /* Hace que la imagen cubra todo el fondo */
-     background-position: center; /* Centra la imagen en el contenedor */
-     background-repeat: no-repeat; /* Evita que la imagen se repita */
-     opacity: 70%;
-     box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra interna */
-     border-radius: 25px;
-     border: 2px solid rgba(163, 46, 85, 0.8); /* Bordes decorativos */
-     padding: 20px;
-     transition: transform 0.3s ease;
-     
-}
-
-
-
-.ladoImagenPaginaForm {
-    margin-left: 20px;
-    
-}
-
-.ladoImagenPaginaForm img{
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.ladoTextoPaginaForm {
-    width: 100%;
-    margin-left: 20px;
-}
-
-.ladoTextoPaginaForm h2 {
-    font-size: 50px;
-    font-weight: 400;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-
-    /* Sombra para resaltar el texto */
-    color: #ffffff;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* Estilos de los Inputs */
-#contactForm { 
-    gap: 40px;
-    margin-right: 40px;
-}
-
-.datosBasicos, .datosExtras {
-    background-color: #f1e4f3;
-    width: 100%;
-    height: 400px;
-    display: block;
-    justify-content: center;
-    text-align: left;
-    padding-top: 20px;
-    padding-left: 20px;
-    font-family: "Inter", sans-serif;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    opacity: 95%;
-
-}
-
-.datosExtras {
-    height: 300px;
-}
-
-#contactForm label {
-    font-size: 18px;
-    color: #35053f;
-    margin-left: 20px;
-
-}
-
-#name, #email, #edad, #phone, #direccion, #ciudad, #pais {
-    width: 80%;
-    margin-top: 10px;
-    height: 40px;
-    padding: 8px;
-    border: 1px solid #50021d;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    margin-left: 20px;
-    font-family: "Inter", sans-serif;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-#name:hover, #email:hover, #edad:hover, #phone:hover, #direccion:hover, #ciudad:hover, #pais:hover{
-    transform: scale(1.05);
-}
-
-#edad {
-    width: 10%;
-    margin-left: 10px;
-}
-
-#phone {
-    width: 30%;
-    margin-left: 10px;
-}
-
-#direccion {
-    width: 68%;
-    margin-left: 10px;
-}
-
-#ciudad {
-    width: 30%;
-}
-
-#pais {
-    width: 30%;
-}
-
-.datosExtras h3 {
-    font-size: 20px;
-    color: #35053f;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-}
-
-.habilidades {
-   margin-bottom: 20px;
-   width: 60%;
-  
-}
-
-/* Estilos de los botones */
-#contactForm button {
-    background-color: #35053f;
-    color: #ffffff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-#contactForm button:hover {
-    background-color: #a52e55;
-    transform: scale(1.05);
-}
-
-
-/* Estilo del select */
-select#Pais {
-    width: 30%;
-    padding: 10px;
-    font-size: 16px;
-    color: #333333;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    appearance: none; /* Elimina el diseño por defecto del navegador */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-/* Estilo general para los labels */
-.datosExtras .habilidades .infoExtra label {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    color: #35053f;
-    margin-bottom: 10px;
-    cursor: pointer; /* Para indicar que es clickable */
-}
-
-/* Estilo para los checkboxes */
-.datosExtras .habilidades input[type="checkbox"] {
-    margin-right: 10px;
-    width: 18px;
-    height: 18px;
-    accent-color: #ff7e5f; /* Color del checkbox al ser seleccionado */
-}
-
-/* Espaciado entre los checkbox */
-.datosExtras  {
-    margin-bottom: 20px;
-    display: flex;
-}
-
-.datosExtras h3 {
-    font-size: 26px;
-    
-}
-
-/* Mejora de estilo para el select */
-.datosExtras select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #333;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    appearance: none;
-    margin-top: 10px;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #ccc;
-    font-family: "Inter", sans-serif;
-    margin-top: 10px;
-}
-
-input[type="file"] {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #35053f;
-}
-
-
-.infoExtra {
-    width: 80%;
-    margin-right: 100px;
-}
-
-.preferenciaContacto {
-    margin-top: 20px;
-}
-
-
-.preferenciaContacto input[type="radio"] {
-    accent-color: #ff7e5f;
-}
-
-.preferenciaContacto label {
-    margin-right: 15px;
-    font-size: 16px;
-    color: #35053f;
-}
-
-
-#paginaForm a{
-    margin-top: 900px;
-}
-
-
-/*RESPONSIVE DESIGN*/
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
 
-    #navbar {
-        height: 90px;
+    /* Mostrar el icono del menú en pantallas pequeñas */
+    .linkMenu {
+        display: block;
     }
 
-    #navbar ul {
-       flex-direction: column;
-       margin-left: 0;
-    }
-
-    
-    #navbar ul li a{
-      display: none;
-    }
-
-    .tituloLogo {
-        margin-left: 5px;
-        font-size: 31px;
-        margin-top: 17px;
-    }
-
-    #iconMenu {
-        display: flex;
-        margin-left: 195px;
-        margin-top: -5px;
-        font-size: 25px;
-        color: rgba(126, 126, 125, 0.795);
-    }
-
-    .linkMenu{
-        text-decoration: none;
-    }
-
-    .navBarResponsive {
-        display: flex;
-        background-color:#1a1a1a;
-        font-weight: 200;
+    /* Ocultar el menú por defecto */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px; /* Debajo de la barra de navegación */
+        left: 0;
         width: 100%;
+        background-color: var(--color-fondo);
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .linkMenu + .menu {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    /* Ajustes de los elementos del menú en pantallas pequeñas */
+    .menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    #contenedor1Info {
+        flex-direction: column;
+        align-items: center;
         margin-top: 100px;
-        height: 20px;
+        height: auto;
     }
 
-    .navBarResponsive ul li{
-        list-style: none;
-        margin-left: -20px;
-        font-size: 20px;
+    #contenedorTexto {
+        width: 90%;
+        margin: 20px 0;
     }
 
-    .navBarResponsive ul li a{
-        text-decoration: none;
-        color: white;
-        font-family: "Raleway", sans-serif;
+    #contenedorTexto h1 {
+        color: var(--color-texto);
+        font-size: 26px;
+        text-align: center;
     }
 
-    #contenedor1Info{
-        margin-top: 100px;
-    }
-
-    #contenedorTexto h1{
-        color: white;
+    #contenedorImagen {
+        display: none;
     }
 
     .parallax {
-        background-attachment: scroll;
-     }
- }
- 
+        display: none;
+    }
+
+    #contenedor2Referentes {
+        margin-top: 50px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
