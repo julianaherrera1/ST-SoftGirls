@@ -7,168 +7,91 @@
     <link href="dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
 
   <header>
-    <nav x-data="{ isOpen: false }" class="absolute top-0 left-0 w-full bg-transparent shadow-none dark:bg-transparent">
-        <div class="container px-6 py-6 mx-auto md:flex md:justify-between md:items-center">
-            <div class="flex items-center justify-between">
-              <p class="text-4xl font-bold text-gray-800 dark:text-gray-200">SoftGirls</p>
+    <nav x-data="{ isOpen: false }" class="w-full bg-transparent fixed z-50">
+      <div class="container px-6 py-4 mx-auto flex justify-between items-center">
+          <div class="flex items-center">
+              <p class="text-3xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
+          </div>
+          <div class="flex lg:hidden">
+              <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 focus:outline-none" aria-label="toggle menu">
+                  <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                  </svg>
+                  <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
+          </div>
+          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-transparent dark:bg-transparent md:mt-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+              <div class="flex flex-col md:flex-row md:mx-6">
+                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Inicio</a>
+                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Referentes</a>
+                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Trabajos</a>
+                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">SoftGirls</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
+  </header>
 
-
-                <!-- Mobile menu button -->
-                <div class="flex lg:hidden">
-                    <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                        </svg>
-                
-                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-transparent md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-                <div class="flex flex-col md:flex-row md:mx-6">
-                    <a class="my-2 text-lg text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Inicio</a>
-                    <a class="my-2 text-lg text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Referentes</a>
-                    <a class="my-2 text-lg text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Trabajos</a>
-                    <a class="my-2 text-lg text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">SoftGirls</a>
-                </div>
-
-                
-            </div>
+  <main >
+    <!-- Carousel Section -->
+    <section class="bg-center bg-no-repeat bg-cover bg-[url('https://i.postimg.cc/L5Bx0xhv/imagen-Carrosuel.jpg')] bg-gray-700 bg-blend-multiply">
+      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl tracking-tight  text-white md:text-5xl lg:text-6xl">Mujeres en el Arte</h1>
+        <p class="mb-8 text-lg font-medium text-gray-300 lg:text-xl sm:px-16 lg:px-48">Explora el impacto de las mujeres en el arte a lo largo de la historia. Descubre sus obras y contribuciones en diversas disciplinas.</p>
+        <div class="flex justify-center space-x-4">
+          <a href="#" class="px-8 py-3 text-lg font-medium text-white bg-purple-700 rounded-lg hover:bg-purple-600 transition-colors shadow-md">Leer Más</a>
         </div>
-    </nav>
-</header>
+      </div>
+    </section>
 
-   
-      <main>
-
-      <!--Carrousel-->
-  <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 class="mb-4 text-4xl tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Mujeres en el Arte</h1>
-      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Explora el impacto de las mujeres en el arte a lo largo de la historia. Descubre sus obras y contribuciones en diversas disciplinas.</p>
-      <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-          <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-              Get started
-              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-          </a>
-          <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Learn more
-          </a>  
+    <!-- Referentes Section -->
+    <section class="bg-gradient-to-r from-purple-900 via-black to-gray-900 py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center text-gray-300">
+        <h2 class="text-3xl  text-white sm:text-5xl">Referentes de Mujeres en el Arte</h2>
+        <p class="mt-6 text-lg">A lo largo de la historia, las mujeres han desempeñado un papel fundamental en el mundo del arte, creando obras que han desafiado las normas y transformado nuestra visión del mundo. Estas artistas rompieron barreras y dejaron un legado imborrable en diversas disciplinas, desde la pintura y la escultura hasta el cine y la fotografía.</p>
+        <div class="mt-10 flex flex-wrap justify-center space-y-6 lg:space-y-0 lg:space-x-8">
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/x8MdrzS6/referente1.jpg" alt="Referente 1" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/q7W0kvwS/referente2.jpg" alt="Referente 2" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/rmzdHsmH/referente3.jpg" alt="Referente 3" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/ryKYk2PX/referente4.jpg" alt="Referente 4" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/PxNKT1Kz/referente5.jpg" alt="Referente 5" class="h-full w-full object-cover object-center">
+          </div>
+          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <img src="https://i.postimg.cc/NjY4L3p0/referente6.jpg" alt="Referente 6" class="h-full w-full object-cover object-center">
+          </div>
         </div>
+        <a href="#" class="mt-8 inline-block px-8 py-3 bg-purple-900 text-white rounded-md hover:bg-purple-700 transition-colors shadow-md">Descubrir más</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white dark:bg-neutral-900 py-8">
+    <div class="container mx-auto text-center">
+      <p class="text-xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
+      <div class="flex justify-center mt-4 space-x-6">
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Inicio</a>
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Referentes</a>
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Trabajos</a>
+      </div>
+      <hr class="my-6 border-gray-200 dark:border-gray-700">
+      <p class="text-sm text-gray-500 dark:text-gray-300">© Copyright 2021. Todos los derechos reservados.</p>
     </div>
-  </section>
+  </footer>
 
-
-      </main>
-
-
-
-      <div class="relative overflow-hidden bg-white">
-        <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
-          <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-            <div class="sm:max-w-lg">
-              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Mujeres en el Arte</h1>
-              <p class="mt-4 text-xl text-gray-500">Explora el impacto de las mujeres en el arte a lo largo de la historia. Descubre sus obras y contribuciones en diversas disciplinas.</p>
-            </div>
-            <div>
-              <div class="mt-10">
-                <!-- Decorative image grid -->
-                <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
-                  <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                    <div class="flex items-center space-x-6 lg:space-x-8">
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                      </div>
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                      </div>
-                      <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                        <div class="h-64 w-44 overflow-hidden rounded-lg">
-                          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="h-full w-full object-cover object-center">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-                <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Conocer Más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-
-
-
-
-      <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
-        <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-          </div>
-          <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
-              <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
-              <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-              <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
-            </div>
-            <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-              <div class="flex flex-col-reverse">
-                <dt class="text-base leading-7 text-gray-300">Offices worldwide</dt>
-                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">12</dd>
-              </div>
-              <div class="flex flex-col-reverse">
-                <dt class="text-base leading-7 text-gray-300">Full-time colleagues</dt>
-                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">300+</dd>
-              </div>
-              <div class="flex flex-col-reverse">
-                <dt class="text-base leading-7 text-gray-300">Hours per week</dt>
-                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">40</dd>
-              </div>
-              <div class="flex flex-col-reverse">
-                <dt class="text-base leading-7 text-gray-300">Paid time off</dt>
-                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-      
 </body>
 </html>
