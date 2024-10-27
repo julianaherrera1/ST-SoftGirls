@@ -6,17 +6,22 @@
     <title>Mujeres en el Arte</title>
     <link href="dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.5/cdn.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
 </head>
 <body class="bg-gray-100 text-gray-800">
 
   <header>
+
     <nav x-data="{ isOpen: false }" class="w-full bg-transparent fixed z-50">
       <div class="container px-6 py-4 mx-auto flex justify-between items-center">
           <div class="flex items-center">
               <p class="text-3xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
           </div>
           <div class="flex lg:hidden">
-              <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 focus:outline-none" aria-label="toggle menu">
+              <button @click="isOpen = !isOpen" type="button" class="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 focus:outline-none" aria-label="toggle menu">
                   <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                   </svg>
@@ -25,16 +30,24 @@
                   </svg>
               </button>
           </div>
-          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-transparent dark:bg-transparent md:mt-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-              <div class="flex flex-col md:flex-row md:mx-6">
-                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Inicio</a>
-                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Referentes</a>
-                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">Trabajos</a>
-                  <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500 md:mx-4 md:my-0" href="#">SoftGirls</a>
-              </div>
+          <div class="hidden lg:flex lg:items-center lg:space-x-4">
+              <a class="text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Inicio</a>
+              <a class="text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Referentes</a>
+              <a class="text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Trabajos</a>
+              <a class="text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">SoftGirls</a>
+          </div>
+      </div>
+  
+      <div x-show="isOpen" @click.away="isOpen = false" x-cloak class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:hidden" style="display: none;">
+          <div class="flex flex-col">
+              <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Inicio</a>
+              <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Referentes</a>
+              <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">Trabajos</a>
+              <a class="my-2 text-lg text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500" href="#">SoftGirls</a>
           </div>
       </div>
   </nav>
+    
   
   </header>
 
@@ -50,37 +63,43 @@
       </div>
     </section>
 
-    <!-- Referentes Section -->
-    <section class="bg-gradient-to-r from-purple-900 via-black to-gray-900 py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center text-gray-300">
-        <h2 class="text-3xl  text-white sm:text-5xl">Referentes de Mujeres en el Arte</h2>
-        <p class="mt-6 text-lg">A lo largo de la historia, las mujeres han desempeñado un papel fundamental en el mundo del arte, creando obras que han desafiado las normas y transformado nuestra visión del mundo. Estas artistas rompieron barreras y dejaron un legado imborrable en diversas disciplinas, desde la pintura y la escultura hasta el cine y la fotografía.</p>
-        <div class="mt-10 flex flex-wrap justify-center space-y-6 lg:space-y-0 lg:space-x-8">
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/x8MdrzS6/referente1.jpg" alt="Referente 1" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/q7W0kvwS/referente2.jpg" alt="Referente 2" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/rmzdHsmH/referente3.jpg" alt="Referente 3" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/ryKYk2PX/referente4.jpg" alt="Referente 4" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/PxNKT1Kz/referente5.jpg" alt="Referente 5" class="h-full w-full object-cover object-center">
-          </div>
-          <div class="h-64 w-44 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
-            <img src="https://i.postimg.cc/NjY4L3p0/referente6.jpg" alt="Referente 6" class="h-full w-full object-cover object-center">
-          </div>
-        </div>
-        <a href="#" class="mt-8 inline-block px-8 py-3 bg-purple-900 text-white rounded-md hover:bg-purple-700 transition-colors shadow-md">Descubrir más</a>
+
+<!-- Referentes Section -->
+<section class="bg-gradient-to-r from-purple-900 via-black to-gray-900 py-16">
+  <div class="max-w-7xl mx-auto px-4 text-center text-gray-300">
+    <h2 class="text-3xl text-white sm:text-5xl">Referentes de Mujeres en el Arte</h2>
+    <p class="mt-6 text-lg">A lo largo de la historia, las mujeres han desempeñado un papel fundamental en el mundo del arte, creando obras que han desafiado las normas y transformado nuestra visión del mundo. Estas artistas rompieron barreras y dejaron un legado imborrable en diversas disciplinas, desde la pintura y la escultura hasta el cine y la fotografía.</p>
+    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/x8MdrzS6/referente1.jpg" alt="Referente 1" class="h-full w-full object-cover object-center">
       </div>
-    </section>
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/q7W0kvwS/referente2.jpg" alt="Referente 2" class="h-full w-full object-cover object-center">
+      </div>
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/rmzdHsmH/referente3.jpg" alt="Referente 3" class="h-full w-full object-cover object-center">
+      </div>
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/ryKYk2PX/referente4.jpg" alt="Referente 4" class="h-full w-full object-cover object-center">
+      </div>
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/PxNKT1Kz/referente5.jpg" alt="Referente 5" class="h-full w-full object-cover object-center">
+      </div>
+      <div class="h-64 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105">
+        <img src="https://i.postimg.cc/NjY4L3p0/referente6.jpg" alt="Referente 6" class="h-full w-full object-cover object-center">
+      </div>
+    </div>
+    <a href="#" class="mt-8 inline-block px-8 py-3 bg-purple-900 text-white rounded-md hover:bg-purple-700 transition-colors shadow-md">Descubrir más</a>
+  </div>
+</section>
+
+
+
+
+
   </main>
 
-  <footer class="bg-white dark:bg-neutral-900 py-8">
+  <footer class="bg-white dark:bg-zinc-900 py-8">
     <div class="container mx-auto text-center">
       <p class="text-xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
       <div class="flex justify-center mt-4 space-x-6">
