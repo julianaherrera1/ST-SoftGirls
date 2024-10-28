@@ -58,7 +58,6 @@ body {
     color: var(--color-primario);
     cursor: pointer;
     transition: color var(--transicion);
-    font-family: "Raleway", sans-serif;
 }
 
 .tituloLogo:hover {
@@ -121,6 +120,43 @@ body {
     cursor: pointer;
 }
 
+/* Estilos de secciones con imagen */
+#section1Historia, #section2Historia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
+    padding: 20px;
+    gap: 20px; /* Espaciado entre columnas */
+}
+
+.ladoTexto, .ladoTextoSection2 {
+    flex: 1 1 300px; /* Flexibilidad para que se ajusten en pantallas pequeñas */
+    margin: 20px; /* Margen interno */
+}
+
+.ladoImagen, .ladoImagenSection2 {
+    flex: 1 1 300px; /* Flexibilidad para que se ajusten en pantallas pequeñas */
+    margin: 20px;
+}
+
+.containerImg {
+    text-align: center; /* Centra la imagen y su descripción */
+}
+
+#section1Historia img, #section2Historia img {
+    width: 100%; /* Asegura que las imágenes sean responsivas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Descripción de imagen */
+.referenciaImg {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Sección de Parallax */
 .parallax {
     background-image: url(https://i.postimg.cc/fLmSHNFM/imagen1.jpg);
     opacity: 60%;
@@ -131,147 +167,7 @@ body {
     background-size: cover;
 }
 
-.logoHome {
-    width: 40px;
-}
-
-/* ESTILOS PAGINA PRINCIPAL */
-#contenedor1Info {
-    display: flex;
-    margin-top: 120px;
-    height: 500px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#contenedorTexto {
-    width: 50%;
-    margin-left: 42px;
-}
-
-#contenedorTexto h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 44px;
-    color: #ddd4dfc9;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-#contenedorTexto h1:hover {
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-#contenedorTexto p {
-    font-family: "Inter", sans-serif;
-    font-weight: 300; 
-    font-size: 1.3em;
-    line-height: 1.6;
-    color: #bbb6b6; 
-}
-
-#contenedorImagen {
-    display: block;
-}
-
-#contenedorImagen a {
-    font-size: 10px;
-    opacity: 0.7;
-    display: block;
-    margin-top: 5px;
-    margin-left: 450px;
-}
-
-#contenedorImagen img {
-    width: 400px;
-    margin-left: 130px;
-    margin-right: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-#contenedorImagen img:hover {
-    transform: scale(1.05);
-}
-
-/* Estilo del banner de la sección 2 */
-#contenedor2Referentes {
-    width: 100%;
-    height: 600px;
-    background-color: #1a1a1a;
-}
-
-.banner-section {
-    position: relative;
-    width: 100%;
-    height: 500px;
-}
-
-.banner {
-    background-image: url(https://i.postimg.cc/ZnLBSL4g/imagen3.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-.banner-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-}
-
-.banner h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.banner-button {
-    display: inline-block;
-    font-size: 1em;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #d6336c;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.banner-button:hover {
-    background-color: #a52a75;
-    transform: scale(1.05);
-}
-
-/* ESTILOS FOOTER */
+/* Estilo del footer */
 #footer {
     background-color: var(--color-footer);
     padding: 20px 0;
@@ -306,76 +202,34 @@ body {
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
     color: var(--color-footer-hover);
 }
 
-/* RESPONSIVE DESIGN */
+/* Media Queries para mejorar la responsividad */
 @media (max-width: 768px) {
-
-    /* Mostrar el icono del menú en pantallas pequeñas */
-    .linkMenu {
-        display: block;
-    }
-
-    /* Ocultar el menú por defecto */
     .menu {
-        display: none;
+        display: none; /* Esconde el menú en pantallas pequeñas */
+    }
+
+    .linkMenu {
+        display: block; /* Muestra el menú desplegable */
+    }
+
+    #navbar {
         flex-direction: column;
-        position: absolute;
-        top: 90px; /* Debajo de la barra de navegación */
-        left: 0;
+    }
+
+    #navbar .menu {
+        flex-direction: column;
         width: 100%;
-        background-color: var(--color-fondo);
-        padding: 20px 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-    /* Mostrar el menú cuando el checkbox está marcado */
-    #menu-toggle:checked + .linkMenu + .menu {
-        display: flex;
-        animation: fadeIn 0.3s ease-in-out;
+    #navbar input[type="checkbox"]:checked + .linkMenu + .menu {
+        display: flex; /* Muestra el menú cuando el checkbox está seleccionado */
     }
 
-    /* Ajustes de los elementos del menú en pantallas pequeñas */
-    .menu li {
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    #contenedor1Info {
-        flex-direction: column;
+    #section1Historia, #section2Historia {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
         align-items: center;
-        margin-top: 100px;
-        height: auto;
     }
-
-    #contenedorTexto {
-        width: 90%;
-        margin: 20px 0;
-    }
-
-    #contenedorTexto h1 {
-        color: var(--color-texto);
-        font-size: 26px;
-        text-align: center;
-    }
-
-    #contenedorImagen {
-        display: none;
-    }
-
-    .parallax {
-        display: none;
-    }
-
-    #contenedor2Referentes {
-        margin-top: 50px;
-    }
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
 }

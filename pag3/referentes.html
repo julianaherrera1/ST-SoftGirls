@@ -3,9 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Referentes</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.5/cdn.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-gray-900 text-gray-200"> <!-- Fondo más oscuro para mejorar el contraste -->
+
+    <header>
+        <nav x-data="{ isOpen: false }" class="w-full bg-transparent fixed z-50">
+            <div class="container px-6 py-4 mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <p class="text-3xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
+                </div>
+                <div class="flex lg:hidden">
+                    <button @click="isOpen = !isOpen" type="button" class="text-gray-300 hover:text-purple-500 focus:outline-none" aria-label="toggle menu">
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                    <a class="text-lg text-gray-300 hover:text-purple-500" href="index.html">Inicio</a>
+                    <a class="text-lg text-gray-300 hover:text-purple-500" href="referentes.html">Referentes</a>
+                    <a class="text-lg text-gray-300 hover:text-purple-500" href="trabajos.html">Trabajos</a>
+                    <a class="text-lg text-gray-300 hover:text-purple-500" href="../index.html">
+                      <img src="https://i.postimg.cc/15t5XSH4/logo.png" alt="Logo SoftGirls" class="h-8 w-8 inline-block">
+                  </a>
+                </div>
+            </div>
+        
+            <div x-show="isOpen" @click.away="isOpen = false" x-cloak class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:hidden" style="display: none;">
+                <div class="flex flex-col">
+                    <a class="my-2 text-lg text-gray-700 hover:text-purple-500" href="index.html">Inicio</a>
+                    <a class="my-2 text-lg text-gray-700 hover:text-purple-500" href="referentes.html">Referentes</a>
+                    <a class="my-2 text-lg text-gray-700 hover:text-purple-500" href="trabajos.html">Trabajos</a>
+                    <a class="text-lg text-gray-700 hover:text-purple-500" href="../index.html">
+                      <img src="https://i.postimg.cc/15t5XSH4/logo.png" alt="Logo SoftGirls" class="h-8 w-8 inline-block">
+                  </a>            
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carousel Section -->
+        <section class="bg-center bg-no-repeat bg-cover bg-[url('https://i.postimg.cc/0QwrjqxX/img-Carrusel-Pag2.jpg')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <h1 class="mb-4 text-5xl tracking-tight text-white md:text-6xl lg:text-7xl shadow-md">Referentes Femeninas en el Arte</h1> <!-- Aumentar tamaño y añadir sombra -->
+                <p class="mb-8 text-lg font-medium text-gray-300 lg:text-xl sm:px-16 lg:px-48">A lo largo de la historia, las mujeres han sido fuente de inspiración y fuerza en el mundo del arte. Desde las pioneras que desafiaron las convenciones hasta las contemporáneas que continúan rompiendo barreras, cada una ha aportado su singular perspectiva y creatividad. En esta sección, celebramos a las mujeres que no solo han dejado huella en su campo, sino que también han empoderado a futuras generaciones de artistas. Sus obras nos invitan a reflexionar sobre la diversidad de experiencias humanas y la importancia de dar voz a todas las narrativas.</p> <!-- Texto en gris claro -->
+                <div class="flex justify-center space-x-4">
+                    <a href="#carruselReferentes" class="px-8 py-3 text-lg font-medium text-white bg-purple-700 rounded-lg hover:bg-purple-600 transition-colors shadow-md">Leer Más </a> <!-- Mejorar el color del botón -->
+                </div>
+            </div>
+        </section>
+
+<!-- Carrusel de Referentes -->
+<section id="carruselReferentes" class="relative bg-white dark:bg-zinc-900 overflow-hidden">
+    <div class="container mx-auto px-6 py-10">
+        <!-- Contenedor del carrusel con overflow-hidden para ocultar imágenes laterales -->
+        <div class="relative overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+                <!-- Referente 1 -->
+                <div class="min-w-full flex-none">
+                    <div class="lg:flex lg:-mx-6">
+                        <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/x8MdrzS6/referente1.jpg" alt="Berthe Morisot">
+                        <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+                            <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Berthe Morisot</h1>
+                            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                                Berthe Morisot (1841-1895) fue una destacada pintora francesa y una de las figuras clave del movimiento impresionista. Capturó la intimidad y belleza de la vida cotidiana, con una técnica que desafiaba las normas de su tiempo.
+                                <br>
+                                <br>
+                                Morisot fue una de las primeras mujeres en ser admitida en el círculo de los impresionistas y participó en varias exposiciones. Sus temas favoritos incluían retratos de mujeres, niños y escenas de la vida familiar, lo que aportó una perspectiva femenina única al arte de su época.
+
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+                            <p class="text-gray-600 dark:text-gray-300">"La pintura es una manera de amar la vida." - Berthe Morisot</p>
+
+
+                            <!-- Botón de Galería -->
+                            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referente 2 -->
+                <div class="min-w-full flex-none">
+                    <div class="lg:flex lg:-mx-6">
+                        <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/q7W0kvwS/referente2.jpg" alt="Camille Claudel">
+                        <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+                            <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Camille Claudel</h1>
+                            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                                Camille Claudel (1864-1943) fue una escultora francesa, conocida por su estilo emocional y profundo. Aunque enfrentó retos personales y profesionales, su obra sigue inspirando a generaciones de artistas.
+                                <br><br>
+                                Claudel aportó un enfoque innovador a la escultura, explorando la forma humana con una intensidad que reflejaba su compleja vida emocional. A pesar de los desafíos personales y profesionales, su legado sigue siendo una inspiración para artistas contemporáneos, resaltando la voz femenina en el arte.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+                            <p class="text-gray-600 dark:text-gray-300">"He tenido el valor de trabajar sola, con total independencia." - Camille Claudel</p>
+                            <!-- Botón de Galería -->
+                            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- Referente 3 -->
+        <div class="min-w-full flex-none">
+            <div class="lg:flex lg:-mx-6">
+                <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/rmzdHsmH/referente3.jpg" alt="Sonia Delaunay">
+                <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+                    <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Sonia Delaunay</h1>
+                    <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                        Sonia Delaunay (1885-1979) fue una pintora, diseñadora y pionera de la abstracción geométrica de origen ucraniano. Delaunay exploró una paleta de colores vibrantes y un enfoque rítmico que incorporaba el uso de círculos y patrones repetitivos. Su innovador estilo fue crucial en movimientos como el orfismo y su influencia se extendió al diseño de moda y textiles.
+                        <br><br>
+                        Junto a su esposo, el artista Robert Delaunay, desarrolló una visión única del arte moderno que trascendió los límites de la pintura. Su legado perdura en la moda y el diseño, donde sus patrones y juegos de color siguen inspirando a creadores contemporáneos.
+                    </p>
+                    <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+                    <p class="text-gray-600 dark:text-gray-300">"El color es la piel de mi alma." - Sonia Delaunay</p>
+                    <!-- Botón de Galería -->
+                    <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                </div>
+            </div>
+        </div>
+
+                   <!-- Referente 4 -->
+<div class="min-w-full flex-none">
+    <div class="lg:flex lg:-mx-6">
+        <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/ryKYk2PX/referente4.jpg" alt="Natalia Goncharova">
+        <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+            <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Natalia Goncharova</h1>
+            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                Natalia Goncharova (1881-1962) fue una pintora, diseñadora y una de las figuras más importantes del arte de vanguardia ruso. Su trabajo, que abarca desde la pintura hasta el diseño de vestuario y escenografía, fue fundamental en el desarrollo del estilo "primitivista" ruso y del futurismo. Goncharova combinó elementos del folclore ruso con técnicas modernas, creando un estilo único que desafiaba las convenciones artísticas de su época.
+                <br><br>
+                Su influencia se extendió a la moda y el teatro, colaborando con la famosa compañía de ballet de Diaghilev en París. Su obra sigue siendo un símbolo de innovación y representa la voz poderosa de una artista mujer en el mundo de la vanguardia.
+            </p>
+            <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+            <p class="text-gray-600 dark:text-gray-300">"He tomado la libertad de crear como una mujer rusa." - Natalia Goncharova</p>
+            <!-- Botón de Galería -->
+            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+        </div>
+    </div>
+</div>
+
+  <!-- Referente 5 -->
+<div class="min-w-full flex-none">
+    <div class="lg:flex lg:-mx-6">
+        <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/PxNKT1Kz/referente5.jpg" alt="Liubov Popova">
+        <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+            <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Liubov Popova</h1>
+            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                Liubov Popova (1889-1924) fue una pintora y diseñadora rusa que destacó como una de las principales figuras del arte constructivista y cubo-futurista. Su enfoque se centró en la exploración de formas geométricas, colores y la interacción entre el arte y la tecnología. Su obra se desarrolló durante un periodo turbulento en Rusia, y sus trabajos reflejaban la energía de la transformación social y política.
+                <br><br>
+                Popova trabajó no solo en la pintura, sino también en el diseño gráfico, el teatro y la escenografía, abriendo nuevos caminos para la integración del arte en la vida cotidiana. Su legado influenció tanto a sus contemporáneos como a generaciones posteriores de artistas vanguardistas.
+            </p>
+            <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+            <p class="text-gray-600 dark:text-gray-300">"Mi objetivo es crear una obra que sea viva, funcional y moderna." - Liubov Popova</p>
+            <!-- Botón de Galería -->
+            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+        </div>
+    </div>
+</div>
+
+   <!-- Referente 6 -->
+<div class="min-w-full flex-none">
+    <div class="lg:flex lg:-mx-6">
+        <img class="object-cover object-center w-full h-96 lg:w-1/2 lg:mx-6 rounded-lg" src="https://i.postimg.cc/NjY4L3p0/referente6.jpg" alt="Frida Kahlo">
+        <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+            <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96">Frida Kahlo</h1>
+            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                Frida Kahlo (1907-1954) fue una pintora mexicana reconocida por sus autorretratos y obras llenas de simbolismo que reflejan su identidad cultural, experiencias personales y lucha con el dolor. Su estilo combina elementos del surrealismo, el arte popular mexicano y su interpretación única de la feminidad, convirtiéndola en un ícono del feminismo y la autodeterminación.
+                <br><br>
+                Kahlo exploró temas de identidad, poscolonialismo, género y clase en sus pinturas, dejando un legado que ha inspirado a generaciones. Sus obras no solo retratan su vida y sus dolores, sino que reflejan una voz poderosa y revolucionaria que resuena en el arte contemporáneo.
+            </p>
+            <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
+            <p class="text-gray-600 dark:text-gray-300">"Pinto autorretratos porque estoy mucho tiempo sola y porque soy la persona a la que mejor conozco." - Frida Kahlo</p>
+            <!-- Botón de Galería -->
+            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+                <!-- Agrega más referentes aquí si es necesario -->
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="flex items-center justify-center mt-6">
+            <button onclick="prevSlide()" class="p-2 text-gray-800 dark:text-gray-200 border rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button onclick="nextSlide()" class="p-2 ml-4 text-gray-800 dark:text-gray-200 border rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Galería Modal -->
+<div id="galleryModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGallery()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/QMpwrpJ2/obra1.jpg" alt="Obra de Berthe Morisot" class="w-full h-40 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/LsTgrvF6/obra2.jpg" alt="Otra obra de Berthe Morisot" class="w-full h-40 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/BQxNCFVc/obra3.jpg" alt="Obra de Camille Claudel" class="w-full h-40 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/sDbDL6z4/obra4.jpg" alt="Otra obra de Camille Claudel" class="w-full h-40 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const carousel = document.getElementById('carousel');
+        const slideWidth = carousel.clientWidth;
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    function prevSlide() {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+        const totalSlides = document.querySelectorAll('#carousel > div').length;
+        currentIndex = Math.min(currentIndex + 1, totalSlides - 1);
+        showSlide(currentIndex);
+    }
+
+    // Función para abrir la galería modal
+    function openGallery() {
+        document.getElementById('galleryModal').classList.remove('hidden');
+    }
+
+    // Función para cerrar la galería modal
+    function closeGallery() {
+        document.getElementById('galleryModal').classList.add('hidden');
+    }
+</script>
+
+
+
+        
+
+
+
+        
+    </main>
+
+    <footer class="bg-white dark:bg-zinc-900 py-8">
+        <div class="container mx-auto text-center">
+          <p class="text-xl font-bold text-purple-700 dark:text-purple-400">SoftGirls</p>
+          <div class="flex justify-center mt-4 space-x-6">
+            <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Inicio</a>
+            <a href="referentes.html" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Referentes</a>
+            <a href="trabajos.html" class="text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-500">Trabajos</a>
+          </div>
+          <hr class="my-6 border-gray-200 dark:border-gray-700">
+          <p class="text-sm text-gray-500 dark:text-gray-300">© Copyright 2021. Todos los derechos reservados.</p>
+        </div>
+      </footer>
 </body>
 </html>
