@@ -86,7 +86,7 @@
 
 
                             <!-- Botón de Galería -->
-                            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                            <button onclick="openGalleryRef1()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
                             <p class="text-gray-600 dark:text-gray-300">"He tenido el valor de trabajar sola, con total independencia." - Camille Claudel</p>
                             <!-- Botón de Galería -->
-                            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                            <button onclick="openGalleryRef2()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
                     <p class="text-gray-600 dark:text-gray-300">"El color es la piel de mi alma." - Sonia Delaunay</p>
                     <!-- Botón de Galería -->
-                    <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+                    <button onclick="openGalleryRef3()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
                 </div>
             </div>
         </div>
@@ -144,7 +144,7 @@
             <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
             <p class="text-gray-600 dark:text-gray-300">"He tomado la libertad de crear como una mujer rusa." - Natalia Goncharova</p>
             <!-- Botón de Galería -->
-            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+            <button onclick="openGalleryRef4()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
         </div>
     </div>
 </div>
@@ -163,7 +163,7 @@
             <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
             <p class="text-gray-600 dark:text-gray-300">"Mi objetivo es crear una obra que sea viva, funcional y moderna." - Liubov Popova</p>
             <!-- Botón de Galería -->
-            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+            <button onclick="openGalleryRef5()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
         </div>
     </div>
 </div>
@@ -182,7 +182,7 @@
             <h3 class="mt-6 text-lg font-medium text-purple-700">Frase Inspiradora</h3>
             <p class="text-gray-600 dark:text-gray-300">"Pinto autorretratos porque estoy mucho tiempo sola y porque soy la persona a la que mejor conozco." - Frida Kahlo</p>
             <!-- Botón de Galería -->
-            <button onclick="openGallery()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
+            <button onclick="openGalleryRef6()" class="mt-6 px-4 py-2 text-white bg-purple-700 rounded hover:bg-purple-500 focus:outline-none">Ver Galería</button>
         </div>
     </div>
 </div>
@@ -212,9 +212,10 @@
 </section>
 
 <!-- Galería Modal -->
-<div id="galleryModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+ <!--Galeria Referente 1-->
+<div id="galleryModalRef1" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
     <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
-        <button onclick="closeGallery()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+        <button onclick="closeGalleryRef1()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -222,13 +223,109 @@
         <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
         <div class="grid grid-cols-2 gap-4">
             <!-- Imágenes de la galería -->
-            <img src="https://i.postimg.cc/QMpwrpJ2/obra1.jpg" alt="Obra de Berthe Morisot" class="w-full h-40 object-cover rounded-lg">
-            <img src="https://i.postimg.cc/LsTgrvF6/obra2.jpg" alt="Otra obra de Berthe Morisot" class="w-full h-40 object-cover rounded-lg">
-            <img src="https://i.postimg.cc/BQxNCFVc/obra3.jpg" alt="Obra de Camille Claudel" class="w-full h-40 object-cover rounded-lg">
-            <img src="https://i.postimg.cc/sDbDL6z4/obra4.jpg" alt="Otra obra de Camille Claudel" class="w-full h-40 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/cC3T3XjC/img1-Referente1.jpg" alt="Obra de Berthe Morisot 1" class="w-full h-52 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/x8BRfCvW/img2-Referente1.jpg" alt="Obra de Berthe Morisot 2" class="w-full h-52 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/4NLKhMjx/img3-Referente1.jpg" alt="Obra de Berthe Morisotl 3" class="w-full h-52 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/JnS8LNFm/img4-Referente1.jpg" alt="Obra de Berthe Morisot 4" class="w-full h-52 object-cover rounded-lg">
         </div>
     </div>
 </div>
+
+<!--Galeria Referente 2-->
+<div id="galleryModalRef2" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGalleryRef2()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/mDvvqbcg/img1-Referente2.jpg" alt="Obra de Camille claudel 1" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/g2gfpyw5/img2-Referente2.jpg" alt="Obra de Camille claudel 2" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/LX17jryK/img3-Referente2.jpg" alt="Obra de Camille claudel 3" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/Rh1DDw5g/img4-Referente2.jpg" alt="Obra de Camille claudel 4" class="w-full h-64 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
+<!--Galeria Referente 3-->
+<div id="galleryModalRef3" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGalleryRef3()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/hGq7SmHL/img1-Referente3.jpg" alt="Obra de Sonia Delaunay 1" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/N072LMcW/img2Ref3.jpg alt="Obra de Sonia Delaunay 2" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/pTWhjHVy/img3Ref3.jpg" alt="Obra de Sonia Delaunay 3" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/D0mSCPXT/img4Ref3.jpg" alt="Obra de Sonia Delaunay 4" class="w-full h-64 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
+<!--Galeria Referente 4-->
+<div id="galleryModalRef4" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGalleryRef4()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/PfcJXZDC/img1Ref4.jpg" alt="Obra de Natalia Goncharova 1" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/c4nHrH7X/img2Ref4.jpg " alt="Obra de Natalia Goncharova 2" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/26yjm88d/img3Ref4.jpg" alt="Obra de Natalia Goncharova 3" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/br2zDCns/img4Ref4.jpg" alt="Obra de Natalia Goncharova 4" class="w-full h-64 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
+<!--Galeria Referente 5-->
+<div id="galleryModalRef5" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGalleryRef5()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/sxRVWP4m/img1Ref5.jpg" alt="Obra de Liubov Popova 1" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/MZyZS4zF/img2Ref5.jpg" alt="Obra de Liubov Popova 2" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/zX8zXjBX/img3Ref5.jpg" alt="Obra de Liubov Popova 3" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/fRbMYRmG/img4Ref5.jpg" alt="Obra de Liubov Popova 4" class="w-full h-64 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
+<!--Galeria Referente 6-->
+<div id="galleryModalRef6" class="fixed inset-0 z-50 hidden bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-3xl w-full">
+        <button onclick="closeGalleryRef6()" class="absolute top-2 right-2 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Galería de Obras</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Imágenes de la galería -->
+            <img src="https://i.postimg.cc/qqB5WzJ0/img1Ref6.jpg" alt="Obra de Frida Kahlo 1" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/7hBW4whz/img2Ref6.jpg" alt="Obra de Frida Kahlo 2" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/J7KgZcxh/img3Ref6.jpg" alt="Obra de Frida Kahlo 3" class="w-full h-64 object-cover rounded-lg">
+            <img src="https://i.postimg.cc/KYnpzn4x/img4Ref5.jpg" alt="Obra de Frida Kahlo 4" class="w-full h-64 object-cover rounded-lg">
+        </div>
+    </div>
+</div>
+
 
 <script>
   let currentSlide = 0;
@@ -251,13 +348,55 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
-function openGallery() {
-        document.getElementById('galleryModal').classList.remove('hidden');
+function openGalleryRef1() {
+        document.getElementById('galleryModalRef1').classList.remove('hidden');
     }
 
-    function closeGallery() {
-        document.getElementById('galleryModal').classList.add('hidden');
+    function closeGalleryRef1() {
+        document.getElementById('galleryModalRef1').classList.add('hidden');
     }
+
+    function openGalleryRef2() {
+        document.getElementById('galleryModalRef2').classList.remove('hidden');
+    }
+
+    function closeGalleryRef2() {
+        document.getElementById('galleryModalRef2').classList.add('hidden');
+    }
+
+    function openGalleryRef3() {
+        document.getElementById('galleryModalRef3').classList.remove('hidden');
+    }
+
+    function closeGalleryRef3() {
+        document.getElementById('galleryModalRef3').classList.add('hidden');
+    }
+
+    function openGalleryRef4() {
+        document.getElementById('galleryModalRef4').classList.remove('hidden');
+    }
+
+    function closeGalleryRef4() {
+        document.getElementById('galleryModalRef4').classList.add('hidden');
+    }
+
+    function openGalleryRef5() {
+        document.getElementById('galleryModalRef5').classList.remove('hidden');
+    }
+
+    function closeGalleryRef5() {
+        document.getElementById('galleryModalRef5').classList.add('hidden');
+    }
+
+    function openGalleryRef6() {
+        document.getElementById('galleryModalRef6').classList.remove('hidden');
+    }
+
+    function closeGalleryRef6() {
+        document.getElementById('galleryModalRef6').classList.add('hidden');
+    }
+
+
 // Inicializar el carrusel mostrando la primera diapositiva
 showSlide(currentSlide);
 
